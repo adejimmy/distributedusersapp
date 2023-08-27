@@ -1,0 +1,33 @@
+spring:
+  application:
+    name: users-service
+#  config:
+#    import: "optional:configserver:http://localhost:8088"
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    url: jdbc:mysql://localhost:3306/revpay
+    password: root
+  security:
+    user:
+      name: admin
+      password: password
+  jpa:
+    hibernate:
+      ddl-auto: update
+    database-platform: org.hibernate.dialect.MySQL5Dialect
+    generate-ddl: true
+  #application-specific string used to encrypt tokens
+  # token valid for 10 minutes
+security:
+  jwt:
+    token:
+      jwtSecret: ======================Adoga=Spring===========================
+      jwtExpirationMs: 600000
+#albums:
+#  url: http://localhost:8082/api/salarystructure
+server:
+  port: 8081
+
+
+

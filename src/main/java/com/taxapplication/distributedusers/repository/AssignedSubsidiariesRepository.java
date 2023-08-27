@@ -1,0 +1,14 @@
+package com.taxapplication.distributedusers.repository;
+
+import com.taxapplication.distributedusers.domain.AssignedSubsidiaries;
+import com.taxapplication.distributedusers.domain.Role;
+import com.taxapplication.distributedusers.domain.Users;
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.stereotype.Repository;
+
+import java.util.Optional;
+
+@Repository
+public interface AssignedSubsidiariesRepository extends JpaRepository<AssignedSubsidiaries, Long> {
+
+}
